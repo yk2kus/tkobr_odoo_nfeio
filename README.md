@@ -29,12 +29,12 @@ Este módulo adiciona um botão de pesquisa junto o campo CNPJ e outro depois do
 
 # Sobre a [NFE.io][2]
 
-A NFE.io é uma WebAPI robusta e bastante completa que permite a consulta de informações empresariais para todo o Brasil (empresas, endereços, países, cidades, estados, notas fiscais eletrônicas). Esta API disponibiliza um serviço de acesso aos dados (API REST) que possibilita consultar os dados extraídos diretamente de diferentes fontes como Receita Federal, Correios, Simples Nacional, IBGE entre outros.
+A NFE.io é uma WebAPI robusta e bastante completa que permite a consulta de informações empresariais para todo o Brasil (empresas, endereços, países, cidades, estados, notas fiscais eletrônicas).  
+Esta API disponibiliza um serviço de acesso aos dados (API REST) que possibilita consultar os dados extraídos diretamente de diferentes fontes como Receita Federal, Correios, Simples Nacional, IBGE entre outros.
 
 # Dependências
 
-Para instalar este módulo tem de instalar o módulo l10n_br_base da localização Brasileira.
-
+Para instalar este módulo tem de instalar o módulo l10n_br_base da localização Brasileira.  
 Para funcionar com a NFE.io deve primeiro se cadastrar no site [http://app.nfe.io]
 
 [1]: http://www.odoo.com/
