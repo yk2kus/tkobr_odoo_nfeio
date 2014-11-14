@@ -1,5 +1,3 @@
-![Pesquisa de Endereço via CEP](http://www.thinkopensolutions.com.br/img/logotkobr.png "Pesquisa Endereço via CEP")
-
 Integração Odoo NFE.io
 ==========
 
