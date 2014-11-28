@@ -5,7 +5,7 @@ Módulo de integração entre o [Odoo][1] e [NFE.io][2], para preenchimento auto
 
 # Funcionalidades
 
-Este módulo adiciona um botão de pesquisa junto o campo CNPJ e outro depois do CEP, para preenchimento automático dos dados da empresa e/ou endereço.
+Este módulo adiciona um botão de pesquisa junto ao campo CNPJ e outro depois do CEP, para preenchimento automático dos dados da empresa e/ou endereço buscando a informação ao NFE.io.
 
 - **CNPJ**, Obtenha os dados de uma empresa através do seu CNPJ:
   - Nome Fantasia
