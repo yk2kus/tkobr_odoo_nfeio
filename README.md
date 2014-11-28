@@ -34,8 +34,10 @@ Esta API disponibiliza um serviço de acesso aos dados (API REST) que possibilit
 
 # Dependências
 
-Para instalar este módulo tem de instalar o módulo l10n_br_base da localização Brasileira.  
-Para funcionar com a NFE.io deve primeiro se cadastrar no site [http://app.nfe.io]
+Para instalar este módulo tem de instalar o módulo [l10n_br_base][4] da localização Brasileira.  
+Para funcionar deve primeiro se cadastrar no site [NFE.io][3] para a obtenção da APIKEY, que deve ser inserida no campo NFEIO API em Configurações/Empresas, aba Configuração na(s) empresa(s).
 
 [1]: http://www.odoo.com/
 [2]: http://nfe.io/consultas-automatizadas/
+[3]: http://app.nfeio.io/
+[4]: https://github.com/odoobrasil-fiscal/l10n_br_core
