@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    	<record id="nfeio_base_company_form" model="ir.ui.view">
+			<field name="name">l10n_br_account.company</field>
+			<field name="model">res.company</field>
+			<field name="inherit_id" ref="base.view_company_form" />
+			<field name="arch" type="xml">
+				
+				<field name="country_id" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				<field name="state_id" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				<field name="street" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				<field name="street2" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				<field name="zip" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				
+				<notebook>
+					
+					<page position="inside" string="Fiscal">
+						<notebook>
+							<page string="Dados Fiscais">
+								<group>
+									<field name="fiscal_type" attrs="{'readonly':[('is_nfeio','=',True)]}"/>
+								</group>
+								
+								<group string="CNAE">
+									<field name="cnae_main_id" attrs="{'readonly':[('is_nfeio','=',True)]}"/>
+								</group>
+								<separator colspan="4" string="CNAE Secundários"/>
+								<field colspan="4" nolabel="1" name="cnae_secondary_ids" attrs="{'readonly':[('is_nfeio','=',True)]}"/>
+								<separator/>
+								
+							</page>
+						</notebook>
+					</page>
+					
+					<page string="Legal Info" position="inside">
+						<group>
+									<field name="naturezaJuridica" attrs="{'readonly':[('is_nfeio','=',True)]}"/>
+									<field name="dataSituacaoCadastral" attrs="{'readonly':[('is_nfeio','=',True)]}"/>
+									<field name="situacaoCadastral" attrs="{'readonly':[('is_nfeio','=',True)]}"/>
+									<field name="dataCadastroMei" attrs="{'readonly':[('is_nfeio','=',True)]}"/>
+									<field name="dataAbertura" attrs="{'readonly':[('is_nfeio','=',True)]}"/>
+									
+									<field name="nfeio_fetch_date" readonly="1"/>
+									<field name="is_nfeio" string="Is Nfeio"/>
+								</group>
+					</page>
+				</notebook>
+			</field>
+		</record>
+    
+        <record model="ir.ui.view" id="view_company_form_inherited">
+            <field name="name">view_company_form_inherited</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="l10n_br_base.view_company_form_inherited"/>
+            <field name="arch" type="xml">
+                <field name="zip" position="after">
+                    <button name="zip_search" type="object" icon="terp-stock_zoom" style="width: 19%%;" class="oe_edit_only"/>
+                </field>
+                <field name="currency_id" position="after">
+                	<separator string="NFEIO API" class="oe_inline"/>
+                	<group colspan="4">
+                		<div>
+                			<field name="nfe_api" nolabel="1" colspan="4" style="width: 70%%;"/>
+                		<button string="Test API" name="validate_api" class="oe_inline oe_edit_only" style="width: 20%%;" type="object"/>
+                		</div>
+                		
+                	</group>
+                </field>
+                <field name="cnpj_cpf" position="replace">
+					<label for ="cnpj_cpf" class="oe_inline"/>
+					<div >
+						<field name="cnpj_cpf" on_change="onchange_mask_cnpj_cpf(cnpj_cpf)" placeholder="CNPJ" style="width: 75%%;"/>
+						<button name="cnpj_search" type="object" icon="terp-stock_zoom" style="width: 19%%;" class="oe_edit_only"/>
+					</div>
+				</field>
+				
+				<field name="legal_name" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				<field name="number" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				<field name="l10n_br_city_id" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				<field name="district" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				<field name="street" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				<field name="street2" position="attributes">
+						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
+				</field>
+				
+            </field>
+        </record>
+        
+    </data>
+</openerp>
