@@ -36,8 +36,6 @@
               ],
     'depends': ['base',
                 'l10n_br_base',
-                
-                
                ],
     'data': [
              'res_company_view.xml',
