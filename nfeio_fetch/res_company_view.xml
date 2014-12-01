@@ -89,9 +89,8 @@
 				<field name="legal_name" position="attributes">
 						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
 				</field>
-				<field name="number" position="attributes">
-						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
-				</field>
+				<field name="number" position="attributes"/>
+				
 				<field name="l10n_br_city_id" position="attributes">
 						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
 				</field>
@@ -101,9 +100,8 @@
 				<field name="street" position="attributes">
 						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
 				</field>
-				<field name="street2" position="attributes">
-						<attribute name="attrs">{'readonly':[('is_nfeio','=',True)]}</attribute>
-				</field>
+				<field name="street2" position="attributes"/>
+				
 				
             </field>
         </record>

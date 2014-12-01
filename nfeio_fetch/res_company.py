@@ -31,7 +31,7 @@ _logger = logging.getLogger(__name__)
 
 
 PRODUCT_FISCAL_TYPE = [
-    ('service', u'Serviço'),('Desconhecido','Desconhecido'),('SimplesNacional','SimplesNacional')
+    ('service', u'Serviço'),('Desconhecido','Desconhecido'),('SimplesNacional','SimplesNacional'),('MEI','MEI')
 ]
 
 
@@ -178,7 +178,7 @@ class res_company(osv.osv):
         r = requests.get(url, headers=headers)
         try:
             result = r.json() 
-            
+            print "result...............",result
     
             if 'message' in result.keys() and  'Not Found for CNPJ number' in result['message']:
                     raise osv.except_osv('Error','CNPJ Not Found') 
@@ -231,7 +231,7 @@ class res_company(osv.osv):
                     else:
                         secondary_cnae_ids.append(scane_ids[0])
                 secondary_cnae_ids = list(set(secondary_cnae_ids))  
-            print "datetime.now().................",datetime.now()   
+
             client_dict = {	
     					   	'name':name,
     					    'legal_name':legal_name and legal_name[0],
