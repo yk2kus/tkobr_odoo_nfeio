@@ -51,6 +51,7 @@
 						<group>
 							<field name="nfeio_fetch_date" readonly="1"/>
 							<field name="is_nfeio" />
+							<field name="nfeio_search"/>
 						</group>
 					</page>
 				</notebook>
@@ -67,8 +68,8 @@
 				</field>
 				<field name="cnpj_cpf" position="replace">
 					<div colspan="4" >
-						<field name="cnpj_cpf" on_change="onchange_mask_cnpj_cpf(is_company, cnpj_cpf)" style="width: 75%%;" nolabel="1" />
-						<button name="cnpj_search" type="object" icon="terp-stock_zoom" style="width: 19%%;" class="oe_edit_only"/>
+						<field name="cnpj_cpf" on_change="onchange_mask_cnpj_cpe(is_company, cnpj_cpf, nfeio_search)" style="width: 75%%;" nolabel="1" />
+						<button name="cnpj_search" type="object" icon="terp-stock_zoom" style="width: 19%%;" class="oe_edit_only" attrs="{'invisible':[('nfeio_search','!=',True)]}"/>
 					</div>
                     
                 </field>

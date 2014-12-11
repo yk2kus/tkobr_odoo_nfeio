@@ -178,10 +178,11 @@ class res_company(osv.osv):
         r = requests.get(url, headers=headers)
         try:
             result = r.json() 
-            print "result...............",result
+            print "result...............1",result
     
             if 'message' in result.keys() and  'Not Found for CNPJ number' in result['message']:
-                    raise osv.except_osv('Error','CNPJ Not Found') 
+                    print "retuned 1................................."
+                    return None
         
             city_code = str(result['endereco']['cidade']['codigo'])[2:] 
             state_code = result['endereco']['estado']
@@ -255,10 +256,10 @@ class res_company(osv.osv):
                             'is_company':True,
                             'nfeio_fetch_date':datetime.now(),
                             }
-              
             return client_dict
+        
         except:
-            raise osv.except_osv('Warning','CNPJ not found')
+            return None
      
                
 
