@@ -178,10 +178,8 @@ class res_company(osv.osv):
         r = requests.get(url, headers=headers)
         try:
             result = r.json() 
-            print "result...............1",result
     
             if 'message' in result.keys() and  'Not Found for CNPJ number' in result['message']:
-                    print "retuned 1................................."
                     return None
         
             city_code = str(result['endereco']['cidade']['codigo'])[2:] 
